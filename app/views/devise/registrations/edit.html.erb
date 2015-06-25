@@ -1,3 +1,17 @@
+
+  <div class="navbar navbar-default navbar-static-top">
+      <div class="navbar-collapse collapse navbar-responsive-collapse">
+        <p class="navbar-text pull-right">
+          <% if user_signed_in? %>
+          Logged in as <strong><%= current_user.email %></strong>.
+          <%= link_to 'Edit profile', edit_user_registration_path %> |
+          <%= link_to "Logout", destroy_user_session_path, method: :delete  %> 
+          <% else %>
+          <%= link_to "Login", new_user_session_path(:role => params[:role]) %>
+          <% end %>
+        </p>
+    </div>
+  </div>
 <h2>Edit <%= resource_name.to_s.humanize %></h2>
 
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>

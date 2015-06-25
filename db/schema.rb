@@ -45,6 +45,7 @@ ActiveRecord::Schema.define(version: 20150623081021) do
     t.string   "email",                  default: "", null: false
     t.string   "encrypted_password",     default: "", null: false
     t.string   "is_admin"
+    t.string   "role"
     t.string   "reset_password_token"
     t.datetime "reset_password_sent_at"
     t.datetime "remember_created_at"
@@ -58,23 +59,14 @@ ActiveRecord::Schema.define(version: 20150623081021) do
     t.string   "first_name"
     t.string   "last_name"
     t.integer  "contact_no"
-    t.string   "company"
     t.string   "address"
     t.string   "city"
     t.string   "country"
     t.string   "state"
     t.integer  "postal_code"
-    t.boolean  "type_of_address"
-    t.boolean  "billing_add_confm"
-    t.boolean  "is_visitor"
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree
   add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
-
-  create_table "welcomes", force: :cascade do |t|
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
 
 end

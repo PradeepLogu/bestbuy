@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'visitors/index'
+
   get 'payments/index'
 
   get 'payments/new'
@@ -10,6 +12,7 @@ Rails.application.routes.draw do
   get 'dashboard/index'
 
   devise_for :users, :controllers => { :omniauth_callbacks => "omniauth_callbacks" }
+  get "/users/sign_up/:role", :to => 'devise/registrations#new'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
   resources :payments, only: [:index, :new, :create]
