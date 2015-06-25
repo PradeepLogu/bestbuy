@@ -1,0 +1,164 @@
+// Place all the styles related to the dashboard controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+body {
+	margin: 0;
+}
+.container {
+	width: 100%;
+	height: 50px;
+	border-bottom: 2px solid #DBDBDB;
+}
+.next-container {
+	width: 100%;
+	height: 85px;
+	margin-left: auto;
+	margin-right: auto;
+
+}
+.next-container-anger {
+	padding-top: 26px;
+	padding-left: 30px;
+}
+.next-container-anger a {
+	padding: 15px;
+	text-decoration: none;
+}
+.header-left {
+	width: 15%;
+	height: 35px;
+	background-color: white;
+	float: left;
+	margin-top: 7px;
+}
+.header-right {
+	width: 32%;
+	height: 44px;
+	background-color: white;
+	float: right;
+}
+.header-right ul li {
+display: inline;
+padding-right: 25px;
+}
+.header-right-text {
+	padding-top: 10px;
+
+}
+.header-right-text a {
+	text-decoration: none;
+
+}
+.wrapper {
+	width: 100%;
+	height: 535px;
+	background-color: white;
+	border-bottom: 2px solid grey;
+	background-image: url("http://www.aventy.com/images/Silhouettes_of_Business_People.jpg");
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+}
+.wrapper-bottom {
+	width: 100%;
+	height: 175px;
+	background-color: white;
+	
+}
+.hidetext {
+	opacity: 0.5;
+}
+.textopacity {
+	opacity: 0.8;
+}
+.wrapper-bottom-box-sub {
+	width: 80%;
+	height: 100px;
+	margin-left: auto;
+	margin-right: auto;
+}
+.wrapper-bottom-box {
+	width: 30%;
+	height: 108px;
+	float: left;
+	list-style: none;
+}
+.wrapper-bottom-box1 {
+	width: 40%;
+	height: 108px;
+	float: left;
+}
+.wrapper-bottom-box2 {
+	width: 30%;
+	height: 108px;
+	float: left;
+}
+
+.third-div {
+	width: 100%;
+	height: 612px;
+	background-color: white;
+	border-bottom: 2px solid blue;
+	background-image: url("http://www.ginwiz.com/images/ecommerce/banner_header.png");
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+	border-bottom: 2px solid #DBDBDB;
+}
+.fourth-div {
+	width: 100%;
+	height: 400px;
+	background-color: white;
+	border-bottom: 2px solid #FF3399;
+}
+.fifth-div {
+	width: 100%;
+	height: 400px;
+	background-color: white;
+	border-bottom: 2px solid #993399;
+}
+.six-div {
+	width: 100%;
+	height: 400px;
+	background-color: white;
+	border-bottom: 2px solid #CC0000;
+}
+.seven-div {
+	width: 100%;
+	height: 400px;
+	background-color: white;
+	border-bottom: 2px solid #FF9933;
+}
+.eight-div {
+	width: 100%;
+	height: 400px;
+	background-color: white;
+	border-bottom: 2px solid #00CCFF;
+}
+/*.header-left-top {
+	padding-top: 43px;
+}
+.header-right {
+	width: 32%;
+	height: 100px;
+	background-color: white;
+	float: right;
+	
+
+}
+.header-right ul li {
+display: inline;
+padding-right: 25px;
+
+}
+.header-right-text {
+	padding-top: 10px;
+}
+.header-center {
+	text-align: center;
+	width: 45%;
+	height: 100px;
+	background-color: white;
+	float: left;
+}
+.header-center-text {
+	padding-top: 41px;
+}*/
