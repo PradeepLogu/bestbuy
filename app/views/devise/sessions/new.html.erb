@@ -4,8 +4,8 @@
         <p class="navbar-text pull-right">
           <% if user_signed_in? %>
           Logged in as <strong><%= current_user.email %></strong>.
-          <%= link_to 'Edit profile', edit_user_registration_path(:role => params[:role]) %> |
-          <%= link_to "Logout", destroy_user_session_path(:role => params[:role]), method: :delete  %> 
+          <%= link_to 'Edit profile', edit_user_registration_path %> |
+          <%= link_to "Logout", destroy_user_session_path, method: :delete  %> 
           <% else %>
           <%= link_to "Login", new_user_session_path(:role => params[:role])  %>
           <% end %>
@@ -15,7 +15,7 @@
 <div class="center">
 <h2>Log in</h2>
 
-<%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+<%= form_for(resource, as: resource_name, url: session_path(resource_name, :role => params[:role])) do |f| %>
   <div class="field">
     <%= f.label :email %><br />
     <%= f.email_field :email, autofocus: true %>
@@ -39,13 +39,13 @@
 <% end %>
 </div>
 
-<% if params[:role] == "visitors" %>
+<% if params[:role] == "customers" %>
 <p>-------------------- OR ---------------------</p>
 <%= link_to "Register", new_registration_path(resource_name, :role => params[:role]) %><br />
 <%= link_to "Sign up with Facebook", user_omniauth_authorize_path(:facebook, :role => params[:role]) %><br>
 <%= link_to "Sign up with Google", user_omniauth_authorize_path(:google_oauth2, :role => params[:role]) %><br>
 <%= link_to "Sign up with Twitter", user_omniauth_authorize_path(:twitter, :role => params[:role]) %><br>
-<% elsif params[:role] == "customers" %>
+<% elsif params[:role] == "admin" %>
 <p>-------------------- OR ---------------------</p>
 <%= link_to "Register", new_registration_path(resource_name, :role => params[:role]) %><br />
 <%= link_to "Sign up with Facebook", user_omniauth_authorize_path(:facebook, :role => params[:role]) %><br>

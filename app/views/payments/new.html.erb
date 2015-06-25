@@ -1,3 +1,17 @@
+
+<div class="navbar navbar-default navbar-static-top">
+      <div class="navbar-collapse collapse navbar-responsive-collapse">
+        <p class="navbar-text pull-right">
+          <% if user_signed_in? %>
+          Logged in as <strong><%= current_user.email %></strong>.
+          <%= link_to 'Edit profile', edit_user_registration_path(:role => params[:role]) %> |
+          <%= link_to "Logout", destroy_user_session_path(:role => params[:role]), method: :delete  %> 
+          <% else %>
+          <%= link_to "Login", new_user_session_path(:role => params[:role])  %>
+          <% end %>
+        </p>
+    </div>
+  </div>
 <div class="row">
   <div class="col-xs-6 col-xs-offset-3">
     <h1>New Payment</h1>

@@ -1,5 +1,9 @@
 
-	<div class="navbar navbar-default navbar-static-top">
+<head>
+<link rel="stylesheet" type="text/css" href="../assets/nav.css">
+</head>
+<body>
+<div class="navbar navbar-default navbar-static-top">
 			<div class="navbar-collapse collapse navbar-responsive-collapse">
 				<p class="navbar-text pull-right">
 					<% if user_signed_in? %>
@@ -12,4 +16,48 @@
 				</p>
 		</div>
 	</div>
-<%= link_to "Payment Details",  payments_index_path %>
+<nav>
+	<ul>
+		<li><a href="#">Dashboard</a></li>
+		<li><%= link_to "Orders", orders_index_path(:role => params[:role]) %></li>
+		<li><a href="#">Products</a>
+			<ul>
+				<li><a href="#">Categories</a></li>
+				<li><a href="#">Product List</a></li>
+				<li><a href="#">Inventory</a></li>
+				<li><a href="#">Coupons</a></li>
+				<li><a href="#">Reviews & Ratings</a></li>
+			</ul>
+		</li>
+		<li><a href="#">Customers</a></li>
+		<li><a href="#">Reports</a></li>
+		<li><a href="#">Discounts</a></li>
+		<li><a href="#">Designs</a>
+			<ul>
+				<li><a href="#">Overview</a></li>
+				<li><a href="#">Website Blog Posting</a></li>
+				<li><a href="#">Theme Page</a></li>
+				<li><a href="#">Navigation</a></li>
+				<li><a href="#">Domains</a></li>
+			</ul>
+		</li>
+		<li><a href="#">Apps</a></li>
+		<li><a href="#">Settings</a>
+		<ul>
+				<li><a href="#">General</a></li>
+				<li><a href="#">Payments</a></li>
+				<li><a href="#">checkout</a></li>
+				<li><a href="#">Shipping</a></li>
+				<li><a href="#">Taxes & calculation Rules</a></li>
+				<li><a href="#">Notifications</a></li>
+				<li><a href="#">Files</a></li>
+				<li><a href="#">Account</a></li>
+				<li><a href="#">Online Store</a></li>
+			</ul></li>
+	</ul>
+</nav>
+</body>
+
+
+
+

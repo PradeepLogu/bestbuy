@@ -5,9 +5,9 @@
 	
 </head>
 <body>
-<div>
+	<div>
 
-	<div class="navbar navbar-default navbar-static-top">
+		<div class="navbar navbar-default navbar-static-top">
 			<div class="navbar-collapse collapse navbar-responsive-collapse">
 				<p class="navbar-text pull-right">
 					<% if user_signed_in? %>
@@ -15,54 +15,49 @@
 					<%= link_to 'Edit profile', edit_user_registration_path(:role => params[:role]) %> |
 					<%= link_to "Logout", destroy_user_session_path(:role => params[:role]), method: :delete  %> 
 					<% else %>
-					<% if params[:role] == "visitors" || params[:role] == "customers" %>
-					<%= link_to "Login", new_user_session_path(:role => params[:role]) %>
-					<% else %>
-					<%= link_to "Store", home_index_path(:role => "visitors"), :target => "_blank" %> |
-					<%= link_to "customer", home_index_path(:role => "customers"), :target => "_blank" %> |
-					<%= link_to "Login", new_user_session_path(:role => "admin") %>
-					<% end %>
-					<% end %>
-				</p>
+					<%#= link_to "Store", home_index_path(:role => "visitors") %> 
+					<%= link_to "store front", new_user_registration_path(:role => "customers") %> |
+					<%= link_to "Admin", new_user_session_path(:role => "admin") %>
+					
+				</div>
+			</div>
+			<div class="next-container">
+				<div class="next-container-anger">
+					<a href="">Features</a>
+					<a href="">Pricing</a>
+					<a href="">Gallery</a>
+					<a href="">Services</a> 
+					<a href="">Resources</a>
+					<a href="">Company</a>
+				</div>
+			</div>			
 		</div>
-	</div>
-	 <div class="next-container">
-	 <div class="next-container-anger">
-	<a href="">Features</a>
-	<a href="">Pricing</a>
-	<a href="">Gallery</a>
-	<a href="">Services</a> 
-	<a href="">Resources</a>
-	<a href="">Company</a>
-	</div>
-	</div>			
- 	</div>
- 	<div class="wrapper">
-	</div>
-	<div class="wrapper-bottom">
-	<div class="wrapper-bottom-box-sub">
-	<div class="wrapper-bottom-box">
-	<h3 class="textopacity">Complete online store builder</h3><p class="hidetext">Start selling quickly with our ecommerce software including website, shopping cart and secure hosting.</p></div>
-	<div class="wrapper-bottom-box1">
-	<h3 class="textopacity">Over $18 billion in sales</h3><p class="hidetext">Volusion merchants have generated over $18 billion in sales, that's 4x more sales than our competitors' merchants.</p></div>
-	<div class="wrapper-bottom-box2">
-	<h3 class="textopacity">Real help from real people</h3><p class="hidetext">You can rely on us for 24x7 support, dedicated account managers and expert resources; all based out of Austin, TX.</p></div>
-	</div>
-	</div>
-	</div>			
-	<div class="third-div">
+		<div class="wrapper">
+		</div>
+		<div class="wrapper-bottom">
+			<div class="wrapper-bottom-box-sub">
+				<div class="wrapper-bottom-box">
+					<h3 class="textopacity">Complete online store builder</h3><p class="hidetext">Start selling quickly with our ecommerce software including website, shopping cart and secure hosting.</p></div>
+					<div class="wrapper-bottom-box1">
+						<h3 class="textopacity">Over $18 billion in sales</h3><p class="hidetext">Volusion merchants have generated over $18 billion in sales, that's 4x more sales than our competitors' merchants.</p></div>
+						<div class="wrapper-bottom-box2">
+							<h3 class="textopacity">Real help from real people</h3><p class="hidetext">You can rely on us for 24x7 support, dedicated account managers and expert resources; all based out of Austin, TX.</p></div>
+						</div>
+					</div>
+				</div>			
+				<div class="third-div">
 
-	</div>
-	<div class="fourth-div">
-	</div>
-	<div class="fifth-div">
-	</div>
-	<div class="six-div">
-	</div>
-	<div class="seven-div">
-	</div>
-	<div class="eight-div">
-	</div>
+				</div>
+				<div class="fourth-div">
+				</div>
+				<div class="fifth-div">
+				</div>
+				<div class="six-div">
+				</div>
+				<div class="seven-div">
+				</div>
+				<div class="eight-div">
+				</div>
 	<!--<div class="header-left">
 
 	<div class="header-left-top"><input type="text" name="search"></div>
@@ -81,7 +76,9 @@
 	<li>Cart</li></ul>
 	</div>
 	</div>
-	</div> -->
-	
+</div> -->
+<% end %>
+
+</p>
 </body>
 </html>
